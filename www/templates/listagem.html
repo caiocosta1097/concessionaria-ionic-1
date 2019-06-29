@@ -1,10 +1,11 @@
 <ion-view>
     <ion-nav-title>Alura Car</ion-nav-title>
+    
     <ion-content>
 
         <ion-list>
-            <ion-item ng-repeat="carro in listaCarros">
-                {{carro}}
+            <ion-item ng-repeat="carro in listaCarros" href="#/detalhes/{{carro}}">
+                {{carro.modelo}} - {{carro.preco | currency:'R$ '}}
             </ion-item>
         </ion-list>
 
