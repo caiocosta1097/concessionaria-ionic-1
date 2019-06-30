@@ -9,10 +9,10 @@
 
                 <ul class="list">
 
-                    <li class="item">{{carro.modelo}}</li>
+                    <li class="item">{{carro.nome}}</li>
 
-                    <li class="item item-toggle" ng-repeat="acessorio in listaAcessorios"> 
-                            {{acessorio.nome}} - {{acessorio.preco | currency: 'R$ '}}
+                    <li class="item item-toggle" ng-repeat="acessorio in listaAcessorios">
+                        {{acessorio.nome}} - {{acessorio.preco | currency: 'R$ '}}
                         <label class="toggle toggle-positive">
                             <input type="checkbox" ng-model="IsChecked" ng-click="click(acessorio, IsChecked)">
                             <div class="track">
@@ -26,6 +26,12 @@
             <div class="item item-divider">
                 {{carro.preco | currency:'R$ '}}
             </div>
+
         </div>
+
+        <a class="button button-positive button-full" href="#/finalizar/{{carro}}">
+            Finalizar compra
+        </a>
+
     </ion-content>
 </ion-view>

@@ -14,4 +14,10 @@ $stateProvider.state('detalhes', {
     controller: 'detalhesController'
 })
 
+$stateProvider.state('finalizar', {
+    url: '/finalizar/:carro',
+    templateUrl: 'templates/finalizarPedido.html',
+    controller: 'finalizarController'
+})
+
 });
